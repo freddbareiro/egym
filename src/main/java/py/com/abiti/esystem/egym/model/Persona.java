@@ -22,6 +22,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import Genero.Genero;
+
 /**
  *
  * @author matia
@@ -195,5 +197,15 @@ public class Persona implements Serializable {
     public String toString() {
         return "py.com.abiti.esystem.egym.model.Persona[ persona=" + persona + " ]";
     }
+
+	public void setGenero(Genero value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setFechaNacimiento(Date convertirLocalDateToDate) {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
