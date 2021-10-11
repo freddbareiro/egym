@@ -70,8 +70,8 @@ public class Main extends HorizontalLayout {
 	private void registerViews() {
 		
 		
-		/*addHiddenView(PrincipalView.class);
-		addHiddenView(AltaPersonaView.class);
+		addHiddenView(PrincipalView.class);
+		/*addHiddenView(AltaPersonaView.class);
 		addHiddenView(UsuarioView.class);
 		addHiddenView(AltaProveedorView.class);
 		addHiddenView(AltaMarcaView.class);

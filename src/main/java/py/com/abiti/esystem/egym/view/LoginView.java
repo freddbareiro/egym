@@ -24,6 +24,7 @@ import com.vaadin.ui.Window;
 
 import com.vaadin.ui.themes.ValoTheme;
 
+import py.com.abiti.esystem.egym.EgymUI;
 import py.com.abiti.esystem.egym.event.EventBus;
 import py.com.abiti.esystem.egym.jpa.JpaUsuario;
 import py.com.abiti.esystem.egym.util.JpaUtil;
@@ -226,6 +227,7 @@ public class LoginView extends CustomComponent {
 			EventBus.post(new py.com.abiti.esystem.egym.event.LoginEvent(jpaUsuario.findUsuarioByUser(user)));
 			UserUtil.set(jpaUsuario.findUsuarioByUser(user));
 			UserUtil.setUsuario(jpaUsuario.findUsuarioByUser(user));
+			EgymUI.getCurrent().getNavigator().navigateTo("");
 			//  EventBus.post(py.com.tipcsa.eva.event.LoginEvent(jpaUsuario.findUsuarioByUser(user)));
 			//EvaUI.getCurrent().getNavigator().navigateTo("");
 			
