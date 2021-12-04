@@ -34,5 +34,8 @@
 @mixin mytheme {
   @include valo;
 
-  // Insert your own theme rules here
+	.login{	
+		background-image: url("../mytheme/imgs/wall.jpg");
+		background-size: 100%;
+	}
 }

@@ -96,7 +96,7 @@ public class NavigationBar extends CssLayout implements ViewChangeListener, Broa
 	}
 	
 	private Component buildTitle() {
-        Label logo = new Label(" <strong>LicorSys</strong>",
+        Label logo = new Label(" <strong>eGym</strong>",
                 ContentMode.HTML);
         logo.setSizeUndefined();
         HorizontalLayout logoWrapper = new HorizontalLayout(logo);

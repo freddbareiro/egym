@@ -79,6 +79,8 @@ public class LoginView extends CustomComponent {
 		
 		txtUsuario.focus();
 		
+		txtUsuario.addValueChangeListener(e ->  cambiarUpper(e.getValue()));
+		
 		
 		
 		txtpass.addShortcutListener(new ShortcutListener("entrar", ShortcutAction.KeyCode.ENTER, null) {
@@ -174,6 +176,13 @@ public class LoginView extends CustomComponent {
 		
 	}*/
 	
+	private void cambiarUpper(String value) {
+		
+		txtUsuario.setValue(value.toUpperCase());
+		
+	}
+
+
 	private void crearComponentes() {
 
 		txtUsuario = new TextField();
@@ -239,56 +248,7 @@ public class LoginView extends CustomComponent {
 		
 		
 	}
-	private void loggear(LoginEvent evento) {
 	
-		
-		String pass;
-		String user;
-		boolean ingresar;
-		
-		pass = evento.getLoginParameter("password").toString();
-		user = evento.getLoginParameter("username").toString();
-		
-		if (pass == "") {
-			Notification.show("Debe ingresar la contraseña", Notification.Type.ERROR_MESSAGE);
-			return;
-		}
-		
-		if (user == "") {
-			Notification.show("Debe ingresar el usuario", Notification.Type.ERROR_MESSAGE);
-			return;
-		}
-		
-		ingresar = jpaUsuario.login(user, pass);
-		if (ingresar) {
-			
-		/*	//Notification.show("Adelante");
-			FuncionariosView funView = new FuncionariosView();
-			Window ventana = new Window("Funcionarios", funView);
-			ventana.center();
-			ventana.setResizable(true);
-			ventana.setModal(true);
-			UI.getCurrent().addWindow(ventana);*/
-			//EventBus.post(new py.com.tipcsa.eva.event.LoginEvent(jpaUsuario.findUsuario(5)));
-			//EventBus.post(new py.com.tipcsa.eva.event.LoginEvent());
-			EventBus.post(new py.com.abiti.esystem.egym.event.LoginEvent(jpaUsuario.findUsuarioByUser(user)));
-			UserUtil.set(jpaUsuario.findUsuarioByUser(user));
-			UserUtil.setUsuario(jpaUsuario.findUsuarioByUser(user));
-			//  EventBus.post(py.com.tipcsa.eva.event.LoginEvent(jpaUsuario.findUsuarioByUser(user)));
-			//EvaUI.getCurrent().getNavigator().navigateTo("");
-			
-			
-		}else {
-			Notification.show("Usuario o contraseña incorrectos", Notification.Type.ERROR_MESSAGE);
-		}
-		
-		
-		
-		
-		
-		
-		
-	}
 	
 	
 	public void setWindow(Window window){
@@ -303,11 +263,14 @@ public class LoginView extends CustomComponent {
 		mainLayout.setWidth("100%");
 		mainLayout.setHeight("100%");
 		mainLayout.setMargin(false);
+		mainLayout.addStyleName("login");
 		
 		// top-level component properties
 		setWidth("100.0%");
 		setHeight("100%");
 		
+		
+	
 		// loginLayout
 		
 		//mainLayout.addComponent(loginLayout);

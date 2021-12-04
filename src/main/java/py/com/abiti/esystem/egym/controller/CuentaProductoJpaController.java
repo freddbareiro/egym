@@ -13,12 +13,10 @@ import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-
 import py.com.abiti.esystem.egym.controller.exceptions.NonexistentEntityException;
 import py.com.abiti.esystem.egym.model.Cuenta;
 import py.com.abiti.esystem.egym.model.CuentaProducto;
 import py.com.abiti.esystem.egym.model.Producto;
-
 
 /**
  *

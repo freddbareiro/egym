@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-
 import py.com.abiti.esystem.egym.controller.exceptions.IllegalOrphanException;
 import py.com.abiti.esystem.egym.controller.exceptions.NonexistentEntityException;
 import py.com.abiti.esystem.egym.model.Cliente;
+
 /**
  *
  * @author matia

@@ -84,8 +84,11 @@ public class PrincipalView extends CustomComponent implements View {
 		btn7.addClickListener(event -> MiesysUI.getCurrent().getNavigator().navigateTo("hanPersona"));
 		*/
 		
-		btn1.addClickListener(e-> EgymUI.getCurrent().getNavigator().navigateTo("altaPersona"));
+		btn1.addClickListener(e-> EgymUI.getCurrent().getNavigator().navigateTo("altaProducto"));
 		btn2.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("consultaUsuario"));
+		btn3.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCuenta"));
+		btn4.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaPersona"));
+		btn5.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCliente"));
 		datosLayout.addComponent(botonLayout);
 		datosLayout.setComponentAlignment(botonLayout, Alignment.MIDDLE_CENTER);
 			
@@ -163,7 +166,7 @@ public class PrincipalView extends CustomComponent implements View {
 		
 		// btn1
 		btn1 = new Button();
-		btn1.setCaption("Alta de Persona");
+		btn1.setCaption("Alta de Producto");
 		//btn1.setImmediate(true);
 		btn1.setWidth("-1px");
 		btn1.setHeight("-1px");
@@ -179,21 +182,21 @@ public class PrincipalView extends CustomComponent implements View {
 		
 		// btn3
 		btn3 = new Button();
-		btn3.setCaption("Alta Reunion");
+		btn3.setCaption("Alta Cuenta");
 		//btn3.setImmediate(true);
 		btn3.setWidth("-1px");
 		btn3.setHeight("-1px");
 		botonLayout.addComponent(btn3);
 		
 		btn4 = new Button();
-		btn4.setCaption("Mantenimiento de Reuniones");
+		btn4.setCaption("Alta Persona");
 		//btn3.setImmediate(true);
 		btn4.setWidth("-1px");
 		btn4.setHeight("-1px");
 		botonLayout.addComponent(btn4);
 		
 		btn5 = new Button();
-		btn5.setCaption("Han");
+		btn5.setCaption("Alta Cliente");
 		botonLayout.addComponent(btn5);
 		
 		btn6 = new Button();
