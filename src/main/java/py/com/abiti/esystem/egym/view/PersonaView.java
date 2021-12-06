@@ -11,7 +11,11 @@ import com.vaadin.ui.themes.ValoTheme;
 
 import py.com.abiti.esystem.egym.EgymUI;
 import py.com.abiti.esystem.egym.jpa.JpaUsuario;
+<<<<<<< Updated upstream
 import py.com.abiti.esystem.egym.jpa.JpaPersona;
+=======
+import py.com.abiti.esystem.egym.jpa.jpaPersona;
+>>>>>>> Stashed changes
 import py.com.abiti.esystem.egym.model.Persona;
 import py.com.abiti.esystem.egym.util.JpaUtil;
 import py.com.abiti.esystem.egym.util.ViewConfig;
@@ -29,7 +33,11 @@ public class PersonaView extends CustomComponent implements View {
 	
 	private Button btnSalir;
 	
+<<<<<<< Updated upstream
 	private JpaPersona jpaPersona = new JpaPersona(JpaUtil.getEntityManagerFactory());
+=======
+	private jpaPersona jpaPersona = new jpaPersona(JpaUtil.getEntityManagerFactory());
+>>>>>>> Stashed changes
 	private JpaUsuario jpausuario = new JpaUsuario(JpaUtil.getEntityManagerFactory());
 	
 	private Window ventana;
