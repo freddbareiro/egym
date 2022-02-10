@@ -12,3 +12,4 @@ public class JpaPlanPago extends PlanPagoJpaController {
 	}
 
 }
+

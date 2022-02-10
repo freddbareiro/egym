@@ -50,6 +50,8 @@ public class Main extends HorizontalLayout {
 		
 		initLayouts();
 		SetupNavigator();
+		
+		
 	}
 	
 	
@@ -74,11 +76,10 @@ public class Main extends HorizontalLayout {
 		addHiddenView(AltaProductoView.class);
 		addHiddenView(AltaCuentaView.class);
 		addHiddenView(AltaPersonaView.class);
-<<<<<<< Updated upstream
 		addHiddenView(AltaClienteView.class);
+		addHiddenView(AltaCliente.class);
 	
-=======
->>>>>>> Stashed changes
+
 		//addHiddenView(viewClass);
 		/*addHiddenView(AltaPersonaView.class);
 		addHiddenView(UsuarioView.class);

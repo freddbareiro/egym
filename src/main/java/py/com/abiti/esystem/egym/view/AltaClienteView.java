@@ -37,13 +37,12 @@ public class AltaClienteView  extends CustomComponent implements View {
 	private Button btnGuardar; 
 	private Button btnSalir; 
 	
-	private ComboBox<Persona> cbxPersona;
+	
 	private DateField dtF_inicio; 
 	private CheckBox chkMatricula;
 	private CheckBox chkHabilitado;
 	private CheckBox chkActivo;
 	
-	private JpaPersona jpaPersona = new JpaPersona(JpaUtil.getEntityManagerFactory());
 	private  JpaCliente jpaCliente = new JpaCliente(JpaUtil.getEntityManagerFactory());
 	
 	
@@ -81,8 +80,8 @@ public class AltaClienteView  extends CustomComponent implements View {
 		
 		mainlayouLayout.addComponent(formLayout);
 		
-		formLayout.addComponent(cbxPersona);
-		formLayout.addComponent(dtF_inicio);
+		
+		
 		formLayout.addComponent(checkLayout);
 		
 		
@@ -114,11 +113,7 @@ public class AltaClienteView  extends CustomComponent implements View {
 		
 	private void cargarcombo() {
 		
-		cbxPersona.setItems(jpaPersona.encontrarPersonaSinSerCliente());
-		cbxPersona.setEmptySelectionAllowed(false);
-		cbxPersona.setItemCaptionGenerator(per -> per.getNombre()
-				+" "+ per.getApellido() ); 
-	    
+		
 	    
 	    
 		
@@ -149,7 +144,7 @@ public class AltaClienteView  extends CustomComponent implements View {
 		Cliente cl = new Cliente();
 		
 		cl.setActivo(chkActivo.getValue());
-		cl.setPersona(cbxPersona.getValue());
+		
 		cl.setMatricula(chkMatricula.getValue());
 		cl.setHabilitado(chkHabilitado.getValue());
 		cl.setFInicio(StringUtils.convertirLocalDateToDate(dtF_inicio.getValue()));
@@ -175,7 +170,7 @@ public class AltaClienteView  extends CustomComponent implements View {
 
 	private void limpiarDatos() {
 		
-		cbxPersona.clear();
+		
 		dtF_inicio.clear();
 		chkActivo.clear();
 		chkHabilitado.clear();
@@ -185,11 +180,8 @@ public class AltaClienteView  extends CustomComponent implements View {
 
 
 	private boolean controlarDatos() {
-		if (cbxPersona.isEmpty()) {
-			Notification.show("Se debe elegir una persina",Notification.TYPE_WARNING_MESSAGE);
-			cbxPersona.focus();
-			return true;
-		}
+		
+		
 			
 			
 		if (dtF_inicio.isEmpty()) {
@@ -212,9 +204,7 @@ public class AltaClienteView  extends CustomComponent implements View {
 		
 	private void crearComponentes() {
 		
-		cbxPersona = new ComboBox<Persona>();
-		cbxPersona.setCaption("PERSONA");
-		cbxPersona.setWidth("300px");
+		
 		
 		dtF_inicio = new 	DateField ();
 		dtF_inicio.setCaption("FECHA DE INICIO");

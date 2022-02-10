@@ -88,10 +88,9 @@ public class PrincipalView extends CustomComponent implements View {
 		btn2.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("consultaUsuario"));
 		btn3.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCuenta"));
 		btn4.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaPersona"));
-<<<<<<< Updated upstream
+
 		btn5.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCliente"));
-=======
->>>>>>> Stashed changes
+		btn6.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("AltaClienteCompleto"));
 		datosLayout.addComponent(botonLayout);
 		datosLayout.setComponentAlignment(botonLayout, Alignment.MIDDLE_CENTER);
 			
