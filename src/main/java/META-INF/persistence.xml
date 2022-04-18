@@ -9,6 +9,9 @@
     <class>py.com.abiti.esystem.egym.model.Cuenta</class>
     <class>py.com.abiti.esystem.egym.model.PagoCuenta</class>
     <class>py.com.abiti.esystem.egym.model.PlanPago</class>
+    <class>py.com.abiti.esystem.egym.model.Funcionario</class>
+    <class>py.com.abiti.esystem.egym.model.Cargo</class>
+    <class>py.com.abiti.esystem.egym.model.Horarios</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/gymDB"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>

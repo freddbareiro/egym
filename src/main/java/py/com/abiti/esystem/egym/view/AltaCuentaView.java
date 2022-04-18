@@ -19,11 +19,6 @@ import py.com.abiti.esystem.egym.EgymUI;
 import py.com.abiti.esystem.egym.jpa.JpaCliente;
 import py.com.abiti.esystem.egym.jpa.JpaCuenta;
 import py.com.abiti.esystem.egym.jpa.JpaPlanPago;
-<<<<<<< Updated upstream
-import py.com.abiti.esystem.egym.jpa.JpaPersona;
-=======
-import py.com.abiti.esystem.egym.jpa.jpaPersona;
->>>>>>> Stashed changes
 import py.com.abiti.esystem.egym.model.Cliente;
 import py.com.abiti.esystem.egym.model.Cuenta;
 import py.com.abiti.esystem.egym.model.PlanPago;

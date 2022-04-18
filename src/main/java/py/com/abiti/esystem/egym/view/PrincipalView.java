@@ -62,6 +62,8 @@ public class PrincipalView extends CustomComponent implements View {
 	private Button btn14;
 	private Button btn15;
 	private Button btn16;
+	private Button btnAltaCargo;
+	private Button btnAltaCliente;
 	
 	private Window ventana;
 	
@@ -88,10 +90,10 @@ public class PrincipalView extends CustomComponent implements View {
 		btn2.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("consultaUsuario"));
 		btn3.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCuenta"));
 		btn4.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaPersona"));
-<<<<<<< Updated upstream
 		btn5.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCliente"));
-=======
->>>>>>> Stashed changes
+		btnAltaCliente.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("AltaClienteCompleto"));
+		btn6.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("AltaClienteCompleto"));
+		btnAltaCargo.addClickListener(e -> EgymUI.getCurrent().getNavigator().navigateTo("altaCargo"));
 		datosLayout.addComponent(botonLayout);
 		datosLayout.setComponentAlignment(botonLayout, Alignment.MIDDLE_CENTER);
 			
@@ -203,12 +205,21 @@ public class PrincipalView extends CustomComponent implements View {
 		botonLayout.addComponent(btn5);
 		
 		btn6 = new Button();
-		btn6.setCaption("Alta de Han");
+		btn6.setCaption("Alta Cliente Completo");
 		botonLayout.addComponent(btn6);
 		
 		btn7 = new Button();
 		btn7.setCaption("Integrantes de Han");
 		botonLayout.addComponent(btn7);
+		
+		btnAltaCargo = new Button();
+		btnAltaCargo.setCaption("Alta Cargo");
+		botonLayout.addComponent(btnAltaCargo);
+		
+		btnAltaCliente = new Button();
+		btnAltaCliente.setCaption("Alta Cliente");
+		botonLayout.addComponent(btnAltaCliente);
+		
 		
 		return botonLayout;
 	}
